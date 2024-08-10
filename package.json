@@ -1,0 +1,28 @@
+{
+  "name": "snapselect",
+  "version": "0.0.1",
+  "description": "SnapSelect is a JavaScript plugin that is designed to improve the functionality of HTML <select> elements. It is lightweight, customizable, and simple to use. SnapSelect offers a modern and sleek interface with advanced features, while remaining highly configurable and efficient.",
+  "main": "dist/js/snapselect.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eveltic/snapselect.git"
+  },
+  "keywords": [
+    "input",
+    "select",
+    "tags",
+    "advanced",
+    "snapselect",
+    "snap",
+    "select"
+  ],
+  "author": "Eveltic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eveltic/snapselect/issues"
+  },
+  "homepage": "https://github.com/eveltic/snapselect#readme"
+}
