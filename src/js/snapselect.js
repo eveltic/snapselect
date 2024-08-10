@@ -321,4 +321,9 @@
             new SnapSelect(element, options);
         });
     };
+	
+	// Export SnapSelect for module environments (Node.js, Webpack, etc.)
+    if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+        module.exports = SnapSelect;
+    }
 })();
