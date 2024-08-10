@@ -28,17 +28,17 @@ Initialize SnapSelect on your desired `<select>` elements using any selector:
 ```html
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-    SnapSelect('.mySelector', {
-        liveSearch: true,
-        placeholder: 'Select an option...',
-        clearAllButton: true,
-        selectOptgroups: true,
-        selectAllOption: true,
-        closeOnSelect: false,
-        maxSelections: 3,
-        allowEmpty: true
+        SnapSelect('.mySelector', {
+            liveSearch: true,
+            placeholder: 'Select an option...',
+            clearAllButton: true,
+            selectOptgroups: true,
+            selectAllOption: true,
+            closeOnSelect: false,
+            maxSelections: 3,
+            allowEmpty: true
+        });
     });
-});
 </script>
 ```
 
