@@ -3,6 +3,15 @@
 
 **SnapSelect** is a lightweight, customizable, and easy-to-use JavaScript plugin designed to enhance the functionality of HTML `<select>` elements. Inspired by popular select plugins like Select2, TomSelect, and Slim Select, SnapSelect offers a modern and sleek interface with advanced features, while remaining highly configurable and performant.
 
+## Examples
+### Multiple select
+![image](https://github.com/user-attachments/assets/1a1ff1df-66f7-4ea1-9a73-a6aef1e72b0f)
+
+### Non multiple select
+![image](https://github.com/user-attachments/assets/f662b60b-15e4-4b7b-b904-10aff2bac44f)
+
+
+
 ## Features
 
 - **Live Search:** Enable users to quickly filter options as they type.
