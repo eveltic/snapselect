@@ -20,8 +20,8 @@
 
 Include the SnapSelect JavaScript and CSS files in your project:
 ```html
-<link rel="stylesheet" href="path/to/snapselect.css">
-<script src="path/to/snapselect.js"></script>
+<link rel="stylesheet" href="/path/to/snapselect/dist/css/snapselect.min.css">
+<script src="/path/to/snapselect/dist/js/snapselect.min.js"></script>
 ```
 ## Usage
 Initialize SnapSelect on your desired `<select>` elements using any selector:
