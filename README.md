@@ -35,16 +35,126 @@ Include the SnapSelect JavaScript and CSS files in your project:
 ## Usage
 Initialize SnapSelect on your desired `<select>` elements using any selector:
 ```html
+<h3>Select without optgroups</h3>
+<!-- Normal Select -->
+<label for="selectNormal">Normal Select:</label>
+<select id="selectNormal" name="selectNormal" class="snapSelect">
+    <option value="AR" data-key="asado Buenos Aires Spanish">Argentina</option>
+    <option value="AU" data-key="vegimite Canberra English">Australia</option>
+    <option value="BR" data-key="feijoada Brasília Portuguese">Brazil</option>
+    <option value="CN" data-key="dumplings Beijing Mandarin">China</option>
+    <option value="FR" data-key="croissant Paris French">France</option>
+    <option value="IN" data-key="curry New Delhi Hindi">India</option>
+    <option value="JP" data-key="sushi Tokyo Japanese">Japan</option>
+    <option value="MX" data-key="tacos Mexico City Spanish">Mexico</option>
+    <option value="NG" data-key="jollof Abuja English">Nigeria</option>
+    <option value="RU" data-key="borscht Moscow Russian">Russia</option>
+    <option value="ZA" data-key="braai Pretoria English">South Africa</option>
+    <option value="ES" data-key="paella Madrid Spanish">Spain</option>
+    <option value="GB" data-key="fish and chips London English">United Kingdom</option>
+    <option value="US" data-key="hamburger Washington D.C. English">United States</option>
+</select>
+<!-- Multiple Select -->
+<label for="selectMultiple">Multiple Select:</label>
+<select id="selectMultiple" name="selectMultiple" multiple class="snapSelect">
+    <option value="AR" data-key="asado Buenos Aires Spanish">Argentina</option>
+    <option value="AU" data-key="vegimite Canberra English">Australia</option>
+    <option value="BR" data-key="feijoada Brasília Portuguese">Brazil</option>
+    <option value="CN" data-key="dumplings Beijing Mandarin">China</option>
+    <option value="FR" data-key="croissant Paris French">France</option>
+    <option value="IN" data-key="curry New Delhi Hindi">India</option>
+    <option value="JP" data-key="sushi Tokyo Japanese">Japan</option>
+    <option value="MX" data-key="tacos Mexico City Spanish">Mexico</option>
+    <option value="NG" data-key="jollof Abuja English">Nigeria</option>
+    <option value="RU" data-key="borscht Moscow Russian">Russia</option>
+    <option value="ZA" data-key="braai Pretoria English">South Africa</option>
+    <option value="ES" data-key="paella Madrid Spanish">Spain</option>
+    <option value="GB" data-key="fish and chips London English">United Kingdom</option>
+    <option value="US" data-key="hamburger Washington D.C. English">United States</option>
+</select>
+
+<h3>Select with optgroups</h3>
+<!-- Select with Optgroups -->
+<label for="selectOptgroupNormal">Normal Select with Optgroups:</label>
+<select id="selectOptgroupNormal" name="selectOptgroupNormal" class="snapSelect">
+    <optgroup label="Africa">
+        <option value="ZA" data-key="braai Pretoria English">South Africa</option>
+        <option value="NG" data-key="jollof Abuja English">Nigeria</option>
+        <option value="EG" data-key="koshari Cairo Arabic">Egypt</option>
+    </optgroup>
+    <optgroup label="Asia">
+        <option value="CN" data-key="dumplings Beijing Mandarin">China</option>
+        <option value="IN" data-key="curry New Delhi Hindi">India</option>
+        <option value="JP" data-key="sushi Tokyo Japanese">Japan</option>
+    </optgroup>
+    <optgroup label="Europe">
+        <option value="FR" data-key="croissant Paris French">France</option>
+        <option value="ES" data-key="paella Madrid Spanish">Spain</option>
+        <option value="GB" data-key="fish and chips London English">United Kingdom</option>
+    </optgroup>
+    <optgroup label="North America">
+        <option value="US" data-key="hamburger Washington D.C. English">United States</option>
+        <option value="MX" data-key="tacos Mexico City Spanish">Mexico</option>
+        <option value="CA" data-key="poutine Ottawa English">Canada</option>
+    </optgroup>
+    <optgroup label="South America">
+        <option value="BR" data-key="feijoada Brasília Portuguese">Brazil</option>
+        <option value="AR" data-key="asado Buenos Aires Spanish">Argentina</option>
+        <option value="CO" data-key="arepa Bogotá Spanish">Colombia</option>
+    </optgroup>
+    <optgroup label="Oceania">
+        <option value="AU" data-key="vegimite Canberra English">Australia</option>
+        <option value="NZ" data-key="hangi Wellington English">New Zealand</option>
+        <option value="FJ" data-key="kokoda Suva English">Fiji</option>
+    </optgroup>
+</select>
+
+<!-- Multiple Select with Optgroups -->
+<label for="selectOptgroupMultiple">Multiple Select with Optgroups:</label>
+<select id="selectOptgroupMultiple" name="selectOptgroupMultiple" multiple class="snapSelect">
+    <optgroup label="Africa">
+        <option value="ZA" data-key="braai Pretoria English">South Africa</option>
+        <option value="NG" data-key="jollof Abuja English">Nigeria</option>
+        <option value="EG" data-key="koshari Cairo Arabic">Egypt</option>
+    </optgroup>
+    <optgroup label="Asia">
+        <option value="CN" data-key="dumplings Beijing Mandarin">China</option>
+        <option value="IN" data-key="curry New Delhi Hindi">India</option>
+        <option value="JP" data-key="sushi Tokyo Japanese">Japan</option>
+    </optgroup>
+    <optgroup label="Europe">
+        <option value="FR" data-key="croissant Paris French">France</option>
+        <option value="ES" data-key="paella Madrid Spanish">Spain</option>
+        <option value="GB" data-key="fish and chips London English">United Kingdom</option>
+    </optgroup>
+    <optgroup label="North America">
+        <option value="US" data-key="hamburger Washington D.C. English">United States</option>
+        <option value="MX" data-key="tacos Mexico City Spanish">Mexico</option>
+        <option value="CA" data-key="poutine Ottawa English">Canada</option>
+    </optgroup>
+    <optgroup label="South America">
+        <option value="BR" data-key="feijoada Brasília Portuguese">Brazil</option>
+        <option value="AR" data-key="asado Buenos Aires Spanish">Argentina</option>
+        <option value="CO" data-key="arepa Bogotá Spanish">Colombia</option>
+    </optgroup>
+    <optgroup label="Oceania">
+        <option value="AU" data-key="vegimite Canberra English">Australia</option>
+        <option value="NZ" data-key="hangi Wellington English">New Zealand</option>
+        <option value="FJ" data-key="kokoda Suva English">Fiji</option>
+    </optgroup>
+</select>
+
 <script>
+    // Initialize SnapSelect on all select elements with the class 'snapSelect'
     document.addEventListener('DOMContentLoaded', () => {
-        SnapSelect('.mySelector', {
+        SnapSelect('.snapSelect', {
             liveSearch: true,
             placeholder: 'Select an option...',
             clearAllButton: true,
             selectOptgroups: true,
             selectAllOption: true,
             closeOnSelect: false,
-            maxSelections: 3,
+            maxSelections: 10,
             allowEmpty: true
         });
     });
