@@ -5,11 +5,11 @@
 
 ## Examples
 ### Multiple select
-![image](https://github.com/user-attachments/assets/1a1ff1df-66f7-4ea1-9a73-a6aef1e72b0f)
+![image](https://github.com/user-attachments/assets/04e243d0-ab37-400e-b1f9-c2aadc0d3863)
+
 
 ### Non multiple select
-![image](https://github.com/user-attachments/assets/f662b60b-15e4-4b7b-b904-10aff2bac44f)
-
+![image](https://github.com/user-attachments/assets/cc55dcda-606e-4822-8bd8-8a7cceded4b9)
 
 
 ## Features
@@ -110,8 +110,16 @@ Initialize SnapSelect on your desired `<select>` elements using any selector:
 </select>
 
 <!-- Multiple Select with Optgroups -->
-<label for="selectOptgroupMultiple">Multiple Select with Optgroups:</label>
-<select id="selectOptgroupMultiple" name="selectOptgroupMultiple" multiple class="snapSelect">
+<label for="selectOptgroupMultiple">Multiple Select with Optgroups and data attributes:</label>
+<select id="selectOptgroupMultiple" name="selectOptgroupMultiple" multiple class="snapSelect"
+    data-live-search="true" 
+    data-placeholder="Choose an option" 
+    data-max-selections="3"
+    data-clear-all-button="true"
+    data-select-optgroups="true"
+    data-select-all-option="true"
+    data-close-on-select="false"
+    data-allow-empty="true">
     <optgroup label="Africa">
         <option value="ZA" data-key="braai Pretoria English">South Africa</option>
         <option value="NG" data-key="jollof Abuja English">Nigeria</option>
@@ -161,6 +169,16 @@ Initialize SnapSelect on your desired `<select>` elements using any selector:
 </script>
 ```
 
+## Supported Data Attributes
+-   `data-live-search="true|false"` (boolean): Enables or disables the search functionality.
+-   `data-max-selections="number"` (number): Sets the maximum number of selections allowed.
+-   `data-placeholder="text"` (string): Sets the placeholder text when no option is selected.
+-   `data-clear-all-button="true|false"` (boolean): Shows or hides the "Clear All" button.
+-   `data-select-optgroups="true|false"` (boolean): Allows or disallows selecting all options within an optgroup.
+-   `data-select-all-option="true|false"` (boolean): Adds or removes the "Select All" option.
+-   `data-close-on-select="true|false"` (boolean): Closes or keeps open the dropdown after selection.
+-   `data-allow-empty="true|false"` (boolean): Allows or disallows deselection in single select mode.
+
 ## Configuration Options
 
 -   `liveSearch` (boolean): Enable live search functionality. Default: `false`.
@@ -171,6 +189,19 @@ Initialize SnapSelect on your desired `<select>` elements using any selector:
 -   `selectAllOption` (boolean): Add a "Select All" option for multi-select. Default: `false`.
 -   `closeOnSelect` (boolean): Close the dropdown after each selection (for multi-select). Default: `true`.
 -   `allowEmpty` (boolean): Allow deselecting the current value (for single select). Default: `false`.
+
+## Accessibility (ARIA)
+SnapSelect is designed with accessibility in mind and includes ARIA attributes to enhance usability with assistive technologies.
+-   The main container is set as role="combobox" with aria-expanded and aria-haspopup attributes.
+-   The items container is set as role="listbox".
+-   Selected items are dynamically updated with aria-live="polite" for screen reader notifications.
+
+## Compatibility and Polyfills
+SnapSelect includes polyfills to support older browsers:
+
+-   `classList` Polyfill: Adds support for classList manipulation on elements.
+-   `addEventListener` Polyfill: Adds support for addEventListener on elements.
+These polyfills ensure that SnapSelect works across a wide range of browsers, including older versions of Internet Explorer.
 
 ## Contributing
 Contributions are welcome! Please fork the repository and submit a pull request for any features, bug fixes, or improvements.
